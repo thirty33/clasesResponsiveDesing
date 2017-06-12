@@ -3,7 +3,7 @@
 	<head>
 		<title>Invie - Tus mejores guitarras!!</title>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="width=device-width , initial-scale=1, user-scalable=no" />
 		<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 		<!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie-one.css"> -->
@@ -12,15 +12,17 @@
 	<body>
 
 		<section id="portada" class="portada background"> <!-- portada -->
+
 			<header id="header" class="header centrado">
 				<!-- logotipo -->
+				<span id="burger-button" class="burger-menu icon-menu"></span>
 				<figure class="logotipo">
 					<img src="images/invie.png" width="186" height="60" alt="Invie logotipo" />	
 
 				</figure>
 
 				<!-- menu -->
-				<nav class="menu">
+				<nav class="menu" id="menu">
 					<ul>
 						<li><a href="index.html">home</a></li>
 						
@@ -131,6 +133,20 @@
 				
 			
 		</footer>
+
+		<script>
+			var $burgerButton = document.getElementById('burger-button');
+			var $menu = document.getElementById('menu');
+
+			$burgerButton.addEventListener('touchstart', toggleMenu);
+
+
+			function toggleMenu(){
+				$menu.classList.toggle('active')
+			}
+
+
+		</script>
 
 	</body>
 </html>

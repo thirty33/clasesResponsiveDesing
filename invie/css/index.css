@@ -28,6 +28,48 @@ section article {
 
 /*Inicio de propiedades del proyecto*/
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url(' ../fonts/icomoon.eot?8nm7le');
+  src:  url(' ../fonts/icomoon.eot?8nm7le#iefix') format('embedded-opentype'),
+    url(' ../fonts/icomoon.ttf?8nm7le') format('truetype'),
+    url(' ../fonts/icomoon.woff?8nm7le') format('woff'),
+    url(' ../fonts/icomoon.svg?8nm7le#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change  ../fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-send:before {
+  content: "\e945";
+}
+.icon-menu:before {
+  content: "\e9bf";
+}
+.icon-close:before {
+  content: "\ea0d";
+}
+
+
+
+
 *{
 
 }
@@ -67,7 +109,10 @@ input:focus, textarea:focus {
 	position:relative;
 }
 
+
+
 .centrado {
+
 	max-width: 800px;
 	margin:auto; /*centrando elemento*/
 }
@@ -287,7 +332,26 @@ input:focus, textarea:focus {
 	padding: 0 10px;
 }	
 
-@media screen and (max-width: 767px) {
+.burger-menu {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	background: #395667;
+	display: inline-block;
+	text-align: center;
+
+	cursor: pointer;
+
+	position: absolute;
+	top: 20px;
+	left: 20px;
+
+	z-index: 3;
+
+}
+
+@media screen and (max-width: 767px) { /*footer*/
 	.footer .centrado {
 		display: block;
 
@@ -335,46 +399,6 @@ input:focus, textarea:focus {
 }
 
 
-@media screen and (max-width: 500px) {
-	.menu li {
-		display: block;
-		margin:0;
-		padding: 8px 0;
-		border-bottom: 1px solid white;
-	}
-
-	.menu li:before {
-		display: none;
-	}
-
-	.menu li:first-child {
-		border-top:1px solid white;
-	}
-
-	.portada {
-		text-align: center;
-	}
-
-	.titulo {
-		font-size: 30px;
-	}
-
-	.title-a {
-		font-size:16px;
-	}
-
-	
-	.guitarras img {
-		width: 200px;
-		/*height: auto;*/
-	}
-
-	.title-b {
-		font-size:30px;
-	}
-
-
-}
 
 
 @media screen and (max-width: 800px) {
@@ -437,7 +461,84 @@ input:focus, textarea:focus {
 
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 500px) {
+
+	.header {
+		position: static;
+	}
+	.menu {
+		display: flex;
+		align-items: center;
+		
+		z-index: 2;
+	
+		background: rgba(255, 60, 88, .8);
+		position: absolute;
+		left: 0;
+		top:0;
+		bottom:0;
+		right: 0;
+
+		width: 100%;
+		left: -100%;
+
+		transition:.3s; 
+
+	}
+
+
+	.menu.active {
+		left:0;
+	}
+
+	.menu ul {
+		flex: 1;
+		padding-left: 0;
+	}
+
+	.menu li {
+		display: block;
+		margin:0;
+		padding: 8px 0;
+		border-bottom: 1px solid white;
+
+	}
+
+	.menu li:before {
+		display: none;
+	}
+
+	.menu li:first-child {
+		border-top:1px solid white;
+	}
+
+	.portada {
+		text-align: center;
+	}
+
+	.titulo {
+		font-size: 30px;
+	}
+
+	.title-a {
+		font-size:16px;
+	}
+
+	
+	.guitarras img {
+		width: 200px;
+		/*height: auto;*/
+	}
+
+	.title-b {
+		font-size:30px;
+	}
+
+
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 650px) {
 
 
 	.header {
@@ -490,3 +591,4 @@ input:focus, textarea:focus {
 	}
 	
 }
+
