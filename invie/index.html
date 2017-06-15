@@ -135,15 +135,36 @@
 		</footer>
 
 		<script>
+
+			var consulta =window.matchMedia('(max-width:500px)');
+			consulta.addListener(mediaQuery); 
+
 			var $burgerButton = document.getElementById('burger-button');
 			var $menu = document.getElementById('menu');
-
-			$burgerButton.addEventListener('touchstart', toggleMenu);
-
 
 			function toggleMenu(){
 				$menu.classList.toggle('active')
 			}
+			function mediaQuery () {
+
+				if(consulta.matches){
+
+					$burgerButton.addEventListener('touchstart', toggleMenu);	
+					
+
+				} else {
+
+					$burgerButton.removeEventListener('touchstart', toggleMenu);
+					
+
+				}
+			}
+			mediaQuery();
+			
+
+			$burgerButton.addEventListener('touchstart', toggleMenu);
+
+
 
 
 		</script>
