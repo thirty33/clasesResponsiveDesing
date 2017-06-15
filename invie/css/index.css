@@ -334,7 +334,7 @@ input:focus, textarea:focus {
 
 .burger-menu {
 
-	visibility: hidden;
+	/*visibility: hidden;*/
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
