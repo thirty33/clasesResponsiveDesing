@@ -136,6 +136,19 @@
 
 		<script>
 
+			var consulta2 = window.matchMedia('(max-width:500px)');
+			consulta2.addListener(listenResize);	
+
+			function listenResize(){
+
+				if(consulta2.matches == true) {
+					document.getElementById("burger-button").style.visibility = 'visible';
+				}else {
+					document.getElementById("burger-button").style.visibility = 'hidden';	
+
+				}
+			}
+
 			var consulta =window.matchMedia('(max-width:500px)');
 			consulta.addListener(mediaQuery); 
 
