@@ -107,6 +107,7 @@ input:focus, textarea:focus {
 
 .header {
 	position:relative;
+
 }
 
 
@@ -449,6 +450,18 @@ input:focus, textarea:focus {
 		margin-bottom: 30px;
 	}
 
+	/*precios*/
+	.tabla {
+		margin: 10px auto;
+	}
+
+	.tabla .centrado {
+		overflow:auto;
+		/*border: 1px solid #273b47;*/
+
+
+	}
+
 	/*guitarras*/
 
 	.guitarras {
@@ -493,6 +506,7 @@ input:focus, textarea:focus {
 
 	.header {
 		position: static;
+		text-align: center;
 	}
 	.menu {
 		display: flex;
