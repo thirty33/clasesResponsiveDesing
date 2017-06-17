@@ -46,11 +46,18 @@
 
 		<section id="guitarras" class="guitarras centrado">
 			<h2>Nuestras guitarras</h2>
-			<div class="video-responsive-contenedor">
-				<iframe  class="video-resposive-src" width="560" height="315" src="https://www.youtube.com/embed/MavlInagQEk" frameborder="0" allowfullscreen></iframe>
+			<div class="video-demo-contenedor">
 				
+				<div class="video-demo">
+					
+					<div class="video-responsive-contenedor">
+						<iframe  class="video-resposive-src" width="560" height="315" src="https://www.youtube.com/embed/MavlInagQEk" frameborder="0" allowfullscreen></iframe>
+						
+					</div>
+				</div>
 			</div>
-			<video src=""></video>
+
+			<!-- <video src=""></video> -->
 
 			<article class="guitarra a">
 				<img class="right" data-src="images/invie-acustica.png" alt="Guitarra Invie acustica" width="350" alt="guitarraa">
@@ -128,8 +135,8 @@
 						<div class="comentarios">
 							<label for="comentarios">Comentarios</label>
 							<textarea id="comentarios" cols="22" rows="7"></textarea>
-							<input type="submit" value="enviar" class="button"/>
 						</div>
+						<input type="submit" value="enviar" class="button"/>
 					</div>
 
 					
@@ -140,6 +147,7 @@
 		</footer>
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 		<script>
 
 			// var consulta2 = window.matchMedia('(max-width:500px)');
@@ -162,8 +170,17 @@
 			var $menu = document.getElementById('menu');
 
 			function toggleMenu(){
-				$menu.classList.toggle('active')
+				$menu.classList.toggle('active');
 			}
+
+			function showMenu(){
+				$menu.classList.add('active');
+			}
+
+			function hideMenu(){
+				$menu.classList.remove('active');
+			}
+
 			function mediaQuery () {
 
 				if(consulta.matches){
@@ -187,6 +204,16 @@
 			var bLazy = new Blazy({ 
       			selector: 'img'
    			});
+
+   			// Gestos touch con Hammerjs
+
+   			var $body = document.body;	
+   			var gestos = new Hammer($body);
+
+			gestos.on('swipeleft', hideMenu);
+
+			gestos.on('swiperight', showMenu);
+
 
 
 

@@ -288,7 +288,7 @@ input:focus, textarea:focus {
 }
 
 .col2 {
-	align-items: center;
+	align-items: flex-start;
 
 }
 
@@ -336,17 +336,18 @@ input:focus, textarea:focus {
 .burger-menu {
 
 	/*visibility: hidden;*/
+	display: none;
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
 	border-radius: 50%;
 	background: #395667;
-	display: inline-block;
+	/*display: inline-block;*/
 	text-align: center;
 
 	cursor: pointer;
 
-	position: absolute;
+	position: fixed;
 	top: 20px;
 	left: 20px;
 
@@ -368,6 +369,18 @@ input:focus, textarea:focus {
 	height:100%; 
 	width: 100%; 
 
+}
+
+.video-demo {
+	max-width: 500px;
+	width: 100%;
+	border: 5px solid #3c5b6e;
+}
+
+.video-demo-contenedor {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 80px;
 }
 
 /*Aprendiendo a colocar imagenes normales e imagenes por Blazy en modo retina (Exportar imagenes en 2x)*/
@@ -498,11 +511,33 @@ input:focus, textarea:focus {
 		width: 250px;
 	}
 
+	.video-demo-contenedor {
+		margin-bottom: 30px;
+	}
 	
 
 }
 
 @media screen and (max-width: 500px) {
+
+	.portada .button {
+		display: block;
+	}
+
+	.col2 {
+		align-items: stretch;
+	}
+
+
+	/*precios*/
+
+	.precios .header .logotipo {
+		margin: 50px 0;
+	}
+
+	.burger-menu {
+		display: block;
+	}
 
 	.header {
 		position: static;
@@ -515,7 +550,7 @@ input:focus, textarea:focus {
 		z-index: 2;
 	
 		background: rgba(255, 60, 88, .8);
-		position: absolute;
+		position: fixed;
 		left: 0;
 		top:0;
 		bottom:0;
@@ -528,6 +563,9 @@ input:focus, textarea:focus {
 
 	}
 
+	.video-demo-contenedor {
+		margin: 0 10px 30px 10px;
+	}
 
 	.menu.active {
 		left:0;
