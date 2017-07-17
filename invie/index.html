@@ -199,11 +199,13 @@
 				if(consulta.matches){
 
 					$burgerButton.addEventListener('touchstart', toggleMenu);	
+					$burgerButton.addEventListener('click', toggleMenu);	
 					
 
 				} else {
 
 					$burgerButton.removeEventListener('touchstart', toggleMenu);
+					$burgerButton.removeEventListener('click', toggleMenu);
 					
 
 				}
