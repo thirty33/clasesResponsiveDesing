@@ -47,6 +47,11 @@
 							<th>Modelo</th>
 							<th>Precio</th>
 							<th>Descripcion</th>
+							<th>Validate</th>
+							<th>Pagado</th>
+							<th>
+								Enviar Correo
+							</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -57,6 +62,11 @@
 							<td>Invie Classic</td>
 							<td>$100000</td>
 							<td>Una guitarra muy pro</td>
+							<td>jidididid</td>
+							<td>jojojojojoj</td>
+							<td class="check-center">
+								<input type="checkbox" name="correo" class="check-absolute">
+							</td>
 						</tr>
 						<tr>
 							<td>Invie Classic</td>
@@ -65,6 +75,11 @@
 							<td>Invie Classic</td>
 							<td>$100000</td>
 							<td>Una guitarra muy pro</td>
+							<td>jidididid</td>
+							<td>jojojojojoj</td>
+							<td class="check-center">
+								<input type="checkbox" name="correo" class="check-absolute">
+							</td>
 						</tr>
 						<tr>
 							<td>Invie Classic</td>
@@ -73,7 +88,25 @@
 							<td>Invie Classic</td>
 							<td>$100000</td>
 							<td>Una guitarra muy pro</td>
+							<td>jidididid</td>
+							<td>jojojojojoj</td>
+							<td class="check-center">
+								<input type="checkbox" name="correo" class="check-absolute">
+							</td>
+						</tr>	
+							<td>Invie Classic</td>
+							<td>$100000</td>
+							<td>Una guitarra muy pro</td>
+							<td>Invie Classic</td>
+							<td>$100000</td>
+							<td>Una guitarra muy pro</td>
+							<td>jidididid</td>
+							<td>jojojojojoj</td>
+							<td class="check-center">
+								<input type="checkbox" name="correo" class="check-absolute">
+							</td>
 						</tr>
+
 					</tbody>
 				</table>
 			</div>
@@ -154,6 +187,7 @@
 				if(consulta.matches){
 
 					$burgerButton.addEventListener('touchstart', toggleMenu);	
+					$burgerButton.addEventListener('click', toggleMenu);	
 					
 
 				} else {

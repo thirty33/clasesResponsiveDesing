@@ -383,6 +383,18 @@ input:focus, textarea:focus {
 	margin-bottom: 80px;
 }
 
+/*tables correo*/
+
+.check-center {
+	position: relative;
+}
+
+.check-absolute {
+	position: absolute;
+	top: 33%;
+	left: 33%;
+}
+
 /*Aprendiendo a colocar imagenes normales e imagenes por Blazy en modo retina (Exportar imagenes en 2x)*/
 /*Aprendiendo a colocar imagen de background en modo retina con mediaquery*/
 
